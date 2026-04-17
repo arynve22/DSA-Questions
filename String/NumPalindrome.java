@@ -1,7 +1,7 @@
 import java.util.*;
 public class NumPalindrome {
     public static int Palindrome(int num){
-        int ori = num;
+        int original = num;
        int reversed = 0 ;
 
        while(num>0){
@@ -10,7 +10,7 @@ public class NumPalindrome {
         num/=10;
        }
 
-       if(ori == reversed) {
+       if(original == reversed) {
         System.out.println("palindrome");
        }else{
         System.out.println("Not Palindrome");
@@ -20,7 +20,7 @@ public class NumPalindrome {
        public static void main(String[] args) {
         
 
-        int num = 1222;
+        int num = 121;
         System.out.println(Palindrome(num));
     }
 }

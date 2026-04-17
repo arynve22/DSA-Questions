@@ -16,7 +16,7 @@ public class MaxPrefixSum {
                 /* j loops for a End loops  */
             for( int j = i ; j< numbers.length ; j++){
                 int end =j;
-                currSum = currSum+numbers[j] ;
+                currSum = start == 0 ? prefix[end] : prefix[end] - prefix[start - 1]; // currSum is the sum of the value of the array and minus the value of the array
                 
                if(maxSum < currSum){ // compare all the value in (maxsum < currSum) is curSum is bigger than curSum store into the maxSum 
                 maxSum = currSum;// curSum store into the MaxSum 
@@ -26,8 +26,8 @@ public class MaxPrefixSum {
         System.out.println(" Max Sum = : " + maxSum);// out is (30) is maximum number the printing the MaxSum
     }
     public static void main(String[] args) {
-        
-        int[] numbers = {1,-2,6,-1,3};
+        int[] numbers = {-2,-3,4,-1,-2,1,5,-3};
+       // int[] numbers = {1,-2,6,-1,3};
         maxSubArraySum(numbers);
     }
 }
